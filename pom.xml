@@ -69,13 +69,17 @@
 			<timezone>-5</timezone>
 		</contributor>
 	</contributors>
+	<properties>
+   		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+ 	</properties>
 	<build>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -94,6 +98,16 @@
 			</plugin>
 		</plugins>
 	</build>
+	
+	<!-- Dependencies that are not present in maven central repository are here -->
+	<repositories>
+		<repository>
+			<id>hml-repo</id>
+			<name>Custom maven repository</name>
+			<url>file://${project.basedir}/lib/repository</url>
+		</repository>
+	</repositories>
+	
 	<dependencies>
 			<!-- This is a plugin project for UnBBayes. Since it uses classes from the core, 
 			     UnBBayes is indeed a dependency -->
