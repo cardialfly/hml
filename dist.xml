@@ -70,6 +70,7 @@
       <excludes>
         <exclude>*:sources</exclude>
         <exclude>br.unb.cic:*</exclude>
+        <exclude>edu.gmu.seor:*</exclude>
         <exclude>javax.help:javahelp</exclude>
         <exclude>jaxme:*</exclude>
         <exclude>xalan:*</exclude>

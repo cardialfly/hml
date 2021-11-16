@@ -75,7 +75,9 @@
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
@@ -83,7 +85,9 @@
 				</configuration>
 			</plugin>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.5.5</version>
 				<configuration>
 					<descriptors>
 						<descriptor>dist.xml</descriptor>
@@ -109,15 +113,13 @@
 	</repositories>
 	
 	<dependencies>
-			<!-- This is a plugin project for UnBBayes. Since it uses classes from the core, 
-			     UnBBayes is indeed a dependency -->
-			
-			
+		<!-- This is a plugin project for UnBBayes. Since it uses classes from the core, 
+		     UnBBayes is indeed a dependency -->
 		<dependency>
 			<groupId>edu.gmu.seor</groupId>
 			<artifactId>prognos.unbbayesplugin.continuous</artifactId>
 			<version>0.0.2</version>
-			<optional>false</optional>
+			<scope>provided</scope>
 			<exclusions>
 				<exclusion>
 					<groupId>org.apache.commons</groupId>
