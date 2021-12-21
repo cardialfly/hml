@@ -288,7 +288,15 @@
 		    <version>1.2.10</version>
 		</dependency>
 		
-				
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<!-- JUnit should not be included to distributions of GPL projects because it is released under a license which is incompatible with GPL -->
+			<!-- Add it only in the context of test and do not add to distribution -->
+			<scope>test</scope>
+		</dependency>
+		
 	</dependencies>
 	<reporting>
 		<plugins>
